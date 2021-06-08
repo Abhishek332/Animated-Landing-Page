@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <title>My Card</title>
+    <style>
+    body{
+        display : flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    :root{
+        --magic : #f42246d9;
+    }
+
+    .card-container{
+        margin : 50px;
+        box-shadow : 0 0 10px rgb(236, 55, 85);
+        border-radius : 20px;
+    }
+    
+    .card-container .img-wrapper{
+        height : 380px;
+        width : 100%;
+        border-radius : 20px 20px 0 0;
+        position : relative;
+        overflow : hidden;
+        display : flex;
+        justify-content : center;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 88%);
+    }
+
+    .card-container .img-wrapper img{
+        height : 100%;
+        width : 100%;
+        object-fit : cover;
+        position : absolute; 
+    }
+
+    .card-container .content{
+        margin : 0 10px;
+    }
+
+    .card-container .content .details{
+        margin : 0 0 30px 15px;
+        letter-spacing : 0.1rem;
+    }
+
+    .card-container .content .details h3{
+        font-family : "RocknRollOne-Regular";
+        font-size : 18px;
+        line-height : 30px;  
+    }
+
+    .card-container .content .details h4{
+        margin : 4px 0px;
+        letter-spacing   : 2px;
+        font-size : 13px;
+    }
+
+    .card-container .content .links{
+        margin : 20px 15px;
+        color : var(--magic);
+        font-weight : bold;
+    }
+
+    .card-container .content .links .link{
+        display : flex;
+        justify-content : space-beetween;
+        align-items : center;
+        margin : 15px 0;
+    }
+
+    .icon{
+        height : 28px;
+        min-width : 28px;
+        border-radius : 50%;
+        display : flex;
+        justify-content : center;
+        align-items : center;
+        padding : 1px;
+    }
+
+    .card-container .content .links .link .icon{
+        background : var(--magic);
+        margin-right : 15px;
+    }
+
+    .card-container .content .links .link .icon i{
+        color : white;
+    }
+
+    .card-container .content .links a{
+        text-decoration : none;
+        font-family : "Raleway-Medium";
+        color : var(--magic);
+    }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="img-wrapper">
+            <img src="Images/me.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="details">
+                <h3>Abhishek Porwal</h3>
+                <h4>Web Developer</h4>
+            </div>
+            <!-- ========================== Links Start ============================ -->
+            <div class  ="links">
+                    <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to=abhishekp2k19@gmail.com">
+                        <div class="link">
+                            <div class="icon">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                            </div>
+                            abhishekp2k19@gmail.com
+                        </div>
+                    </a>
+                    <div class="link">
+                        <div class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        Dayanand Colony, Nagda Jn. (M.P.)
+                    </div>
+                    <a href="https://wa.me/7987442949">
+                        <div class="link">
+                            <div class="icon">
+                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                            </div>
+                            WhatsApp
+                        </div>
+                    </a>
+                    <a href="https://github.com/Abhishek332">
+                        <div class="link">
+                            <div class="icon">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </div>
+                            Github
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/abhishek-porwal-213726194">
+                        <div class="link">
+                            <div class="icon">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </div>
+                            LinkedIn
+                        </div>
+                    </a>
+                    <a href="https://www.facebook.com/abhishek.porwal.5494360/">
+                        <div class="link">
+                            <div class="icon">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </div>
+                            Facebook
+                        </div>
+                    </a>
+            </div>
+            <!-- ========================== Links End ============================ -->
+        </div>
+    </div>
+</body>
+</html>

@@ -221,6 +221,51 @@ section.content-wrapper > div{
     width : 100%;
 }
 
+.animate-box{
+    width : 100vw;
+    height : 200px;
+    overflow : hidden;
+    position : relative;
+    transform: translateY(-100px);
+    z-index : -1;
+}
+
+.animate-box > div{
+    height : 200px;
+    width : 200px;
+    background: linear-gradient(rgba(245, 171, 171, 0.342), rgba(16, 16, 228, 0.678));
+    transform: translateY(80px);
+    opacity : 0;
+    animation : animate-box 2s infinite;
+}
+
+.animate-box > div:nth-child(1){
+    animation-delay : 0.2s;
+}
+.animate-box > div:nth-child(2){
+    animation-delay : 0.4s;
+}
+.animate-box > div:nth-child(3){
+    animation-delay : 0.6s;
+}
+.animate-box > div:nth-child(4){
+    animation-delay : 0.8s;
+}
+.animate-box > div:nth-child(5){
+    animation-delay : 1s;
+}
+.animate-box > div:nth-child(6){
+    animation-delay : 1.2s;
+}
+
+@keyframes animate-box{
+    100%{
+        transform: rotate(45deg) translateY(0px);
+        opacity : 1;
+    }
+}
+
+
 
 
 @media screen and (max-width : 768px) {
@@ -250,6 +295,27 @@ section.content-wrapper > div{
     @keyframes slide{
         100%{
             top : -202.5px;
+        }
+    }
+
+    .animate-box{
+        height : 150px;
+    }
+
+    .animate-box > div{
+        width : 150px;
+        height : 150px;
+    }
+
+    .animate-box > div:nth-child(1),
+    .animate-box > div:nth-child(2){
+        display : none;
+    }
+
+    @keyframes animate-box{
+        100%{
+            transform: rotate(45deg) translateY(40px);
+            opacity : 1;
         }
     }
 }
@@ -291,5 +357,16 @@ section.content-wrapper > div{
         width : 250px;
         margin : 50px;
         position : relative;
+    }
+
+    .animate-box{
+        height : 120px;
+        transform: translateY(-80px);
+    }
+
+    .animate-box > div{
+        width : 100px;
+        height : 100px;
+        background: linear-gradient(rgba(31, 128, 219, 0.342), rgba(16, 16, 228, 0.678));
     }
 }
