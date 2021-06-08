@@ -64,6 +64,10 @@ p{
     flex-wrap : wrap;
 }
 
+.flex-col{
+    flex-direction: column;
+}
+
 nav{
     padding : 20px 50px;
     box-shadow : 0 0 15px rgba(0, 0, 0, 0.39);
@@ -78,6 +82,7 @@ nav .logo{
 
 nav ul{
     list-style  :none;
+    display : flex;
 }
 
 nav ul li{
@@ -112,8 +117,8 @@ nav ul li:hover{
   
 .sm-nav{
     z-index: 2;
-    background : rgba(120, 245, 18, 0.835);
-    padding : 120px 0 20px;
+    background : rgba(170, 214, 255, 0.835);
+    padding : 100px;
     transition: all 1s;
     transform : translateX(100%);
     opacity : 0;
@@ -126,12 +131,12 @@ nav ul li:hover{
     transform : translateX(0%);
     opacity : 1;
 }
-  
-.sm-nav ul li{
-    width : 100px;
+
+.sm-nav a{
+    text-decoration: none;
+    font-size : 18px;
 }
   
-
 section.content-wrapper{
     width : 100vw;
     height : 85vh;
@@ -217,27 +222,74 @@ section.content-wrapper > div{
 }
 
 
-@media only screen and (max-width : 735){
-    nav{
-        background : red;
+
+@media screen and (max-width : 768px) {
+    nav ul{
+        display : none;
+    }
+    
+    .sm-nav{
+        display: flex;
     }
 
-    nav ul li{
-        padding : 10px;
+    .nav-img{
+        display : block;
+    }
+    
+    .wrapper{
+        font-size : 45px;
+    }
+    
+    .wrapper .dynamic-txts{
+        margin-left : 10px;
+        line-height: 67.5px;
+        height : 67.5px;
+        overflow : hidden;
+    }
+
+    @keyframes slide{
+        100%{
+            top : -202.5px;
+        }
+    }
+}
+
+@media screen and (max-width : 625px){
+    .wrapper{
+        flex-direction: column;
+    }
+
+    .wrapper .dynamic-txts{
+        margin-left : 0;
+    }
+}
+
+@media screen and (max-width : 425px)
+{
+    section.content-wrapper p{
+        font-size : 20px;
     }
 
     .wrapper{
-        font-size : 30px;
+        font-size : 40px;
+    }
+    
+    .wrapper .dynamic-txts{
+        line-height: 60px;
+        height : 60px;
+        overflow : hidden;
     }
 
-    
-  .sm-nav{
-    display: flex;
-  }
+    @keyframes slide{
+        100%{
+            top : -180px;
+        }
+    }
 
-  .nav-img{
-    display : block;
-  }
-
+    .img-box{
+        height : 250px;
+        width : 250px;
+        margin : 50px;
+        position : relative;
+    }
 }
-
