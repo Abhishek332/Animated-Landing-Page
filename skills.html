@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Skills</title>
+    <style>
+        .card-container {
+            margin: 100px;
+            display: flex;
+        }
+
+        .card-container .tech-card {
+            height: 150px;
+            width: 300px;
+            min-width: 280px;
+            margin: 20px;
+            position: relative;
+            border-radius: 20px 0;
+            box-shadow: 2px 2px 10px black;
+            transition: all 0.3s linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-container .tech-card h3 {
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .card-container .tech-card:hover {
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top flex justify-between items-center">
+        <a href="index.html" class="logo">My Portfolio</a>
+        <ul>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="https://github.com/Abhishek332">My Projects</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+        <div class="nav-img" onclick="toggle()">
+            <img src="Images/menu-btn.png" alt="">
+        </div>
+    </nav>
+
+    <div class="sm-wrapper">
+        <div class="sm-nav flex flex-col items-center justify-between">
+            <a href="about.html">About Me</a>
+            <a href="https://github.com/Abhishek332">My Projects</a>
+            <a href="skills.html">Skills</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+
+    <div class="card-container flex items-center justify-center flex-wrap">
+        <div class="tech-card">
+            <h3>Html5</h3>
+        </div>
+        <div class="tech-card">
+            <h3>CSS3</h3>
+        </div>
+        <div class="tech-card">
+            <h3>Javascript</h3>
+        </div>
+        <div class="tech-card">
+            <h3>Bootstrap5</h3>
+        </div>
+        <div class="tech-card">
+            <h3>PHP</h3>
+        </div>
+        <div class="tech-card">
+            <h3>Adobe Photoshop</h3>
+        </div>
+        <div class="tech-card">
+            <h3>Corel Draw</h3>
+        </div>
+        <div class="tech-card">
+            <h3>Object Oriented Programming</h3>
+        </div>
+        <div class="tech-card">
+            <h3>Data Structure</h3>
+        </div>
+    </div>
+
+    <script>
+        var sm_nav = document.querySelector('.sm-nav');
+        function toggle() {
+            sm_nav.classList.toggle('nav-transition');
+        }
+    </script>
+</body>
+
+</html>
